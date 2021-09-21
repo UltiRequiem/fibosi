@@ -1,6 +1,6 @@
 package main
 
-import "github.com/UltiRequiem/fibonnaci-api/cmd"
+import "github.com/UltiRequiem/fibonnaci/cmd"
 
 func main() {
 	cmd.Exec()

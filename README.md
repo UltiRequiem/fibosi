@@ -1,1 +1,1 @@
-# fibonnaci-api
+# Fibonacci

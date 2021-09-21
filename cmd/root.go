@@ -1,7 +1,9 @@
 package cmd
 
-import "fmt"
+import "github.com/UltiRequiem/fibonnaci/internal"
 
 func Exec() {
-  fmt.Println("Running...")
+	port := getParams()
+
+	internal.NewServer(port)
 }

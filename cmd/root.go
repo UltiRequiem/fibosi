@@ -3,7 +3,7 @@ package cmd
 import "github.com/UltiRequiem/fibonnaci/internal"
 
 func Exec() {
-	port := getParams()
+	port, banner := getParams()
 
-	internal.NewServer(port)
+	internal.NewServer(port, banner)
 }

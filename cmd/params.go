@@ -2,10 +2,11 @@ package cmd
 
 import "flag"
 
-func getParams() int {
+func getParams() (int, bool) {
 	port := flag.Int("p", 3000, "Port to serve.")
+	banner := flag.Bool("b", false, "Show or Hide ECHO Banner")
 
 	flag.Parse()
 
-	return *port
+	return *port, *banner
 }

@@ -46,7 +46,19 @@ Check for more detailed info on [pkg.go.dev](https://pkg.go.dev/github.com/UltiR
 
 ## API
 
-If you want to try the API, there are a few options:
+API Demo: https://z91bf2703-za30e6095-gtw.qovery.io
+
+### Endpoints
+
+- Root Path
+
+Try `curl http://localhost:3000/890`
+
+- Sequence Path
+
+Try `curl http://localhost:3000/sequence/890`
+
+### Run The API
 
 - Install as a CLI Program...
 
@@ -73,16 +85,6 @@ git clone https://github.com/UltiRequiem/fibonacci
 ```
 
 Then run [`main.go`](./main.go) file.
-
-### Endpoints
-
-- Root Path
-
-Try `curl http://localhost:3000/890`
-
-- Sequence Path
-
-Try `curl http://localhost:3000/sequence/890`
 
 #### License
 

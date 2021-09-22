@@ -7,7 +7,7 @@ import (
 
 	"github.com/labstack/echo/v4"
 
-	. "github.com/UltiRequiem/fibonnaci/pkg"
+	. "github.com/UltiRequiem/fibonacci/pkg"
 )
 
 // Root path handler

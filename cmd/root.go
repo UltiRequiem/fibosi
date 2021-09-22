@@ -4,7 +4,7 @@ package cmd
 import (
 	"log"
 
-	. "github.com/UltiRequiem/fibonnaci/internal"
+	. "github.com/UltiRequiem/fibonacci/internal"
 )
 
 // Initialize the process

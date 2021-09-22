@@ -1,9 +1,19 @@
+// Provides an easy way to initialize the server
 package cmd
 
-import "github.com/UltiRequiem/fibonnaci/internal"
+import (
+	"log"
 
+	. "github.com/UltiRequiem/fibonnaci/internal"
+)
+
+// Initialize the process
 func Exec() {
 	port, banner := getParams()
 
-	internal.NewServer(port, banner)
+	err := NewServer(port, banner)
+
+	if err != nil {
+		log.Fatal(err)
+	}
 }

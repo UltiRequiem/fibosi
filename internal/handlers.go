@@ -10,12 +10,11 @@ import (
 	. "github.com/UltiRequiem/fibonnaci/pkg"
 )
 
+// Root path handler
 func FibonacciHandler(c echo.Context) error {
 	numberParam := c.Param("number")
 
 	number, err := strconv.Atoi(numberParam)
-
-	fmt.Println(err)
 
 	if err != nil {
 		return logManageableError(fmt.Errorf(`Got '%s', but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
@@ -30,6 +29,7 @@ func FibonacciHandler(c echo.Context) error {
 	return c.JSON(http.StatusOK, &FibonacciNumber{fiboNum})
 }
 
+// Sequence Path
 func FibonacciSequenceHandler(c echo.Context) error {
 	numberParam := c.Param("number")
 

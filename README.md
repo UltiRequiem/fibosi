@@ -8,6 +8,8 @@
 ![Build](https://github.com/UltiRequiem/fibonnaci/workflows/Build/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/fibonnaci)](https://goreportcard.com/report/github.com/UltiRequiem/fibonnaci)
 
+High Performance Fibonacci Abstraction Layer and an API.
+
 ## PKG
 
 Install the package by:
@@ -71,6 +73,16 @@ git clone https://github.com/UltiRequiem/fibonacci
 ```
 
 Then run [`main.go`](./main.go) file.
+
+### Endpoints
+
+- Root Path
+
+Try `curl http://localhost:3000/890`
+
+- Sequence Path
+
+Try `curl http://localhost:3000/sequence/890`
 
 #### License
 

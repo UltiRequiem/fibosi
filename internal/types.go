@@ -2,16 +2,16 @@ package internal
 
 // Root path Response
 type FibonacciNumber struct {
-	Number int
+	Number int `json:"number"`
 }
 
 // sequence path JSON Response
 type FibonacciNumberSequence struct {
-	Numbers []int
+	Numbers []int `json:"numbers"`
 }
 
 // Error JSON Response
 type EchoError struct {
-	Message error
-	Code    int
+	Message error `json:"message"`
+	Code    int   `json:"code"`
 }

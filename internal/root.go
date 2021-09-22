@@ -15,8 +15,11 @@ func NewServer(port int, banner bool) error {
 	e.HideBanner = banner
 
 	// Middlewares
-	e.Use(middleware.Logger())
+	// e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
+
+        // Favicon
+	e.File("/favicon.ico", "assets/favicon.ico")
 
 	// Paths
 	e.GET("/:number", FibonacciHandler)

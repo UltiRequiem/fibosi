@@ -1,11 +1,13 @@
 package internal
 
 import (
-	"github.com/labstack/echo/v4"
+	"fmt"
 	"log"
+
+	"github.com/labstack/echo/v4"
 )
 
-func logManageableError(message string, code int, c echo.Context) error {
+func logManageableError(message error, code int, c echo.Context) error {
 	log.Println(message)
-	return c.String(code, message)
+	return c.JSON(code, &EchoError{fmt.Sprintf(`%v`, message), code})
 }

@@ -15,11 +15,19 @@ func FibonacciHandler(c echo.Context) error {
 
 	number, err := strconv.Atoi(numberParam)
 
+	fmt.Println(err)
+
 	if err != nil {
-		logManageableError(fmt.Sprintf(`Got "%s", but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
+		return logManageableError(fmt.Errorf(`Got '%s', but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
 	}
 
-	return c.String(http.StatusOK, strconv.Itoa(Fibonacci(number)))
+	fiboNum, err := Fibonacci(number)
+
+	if err != nil {
+		return logManageableError(err, http.StatusUnprocessableEntity, c)
+	}
+
+	return c.JSON(http.StatusOK, &FibonacciNumber{fiboNum})
 }
 
 func FibonacciSequenceHandler(c echo.Context) error {
@@ -28,8 +36,14 @@ func FibonacciSequenceHandler(c echo.Context) error {
 	number, err := strconv.Atoi(numberParam)
 
 	if err != nil {
-		logManageableError(fmt.Sprintf(`Got "%s", but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
+		return logManageableError(fmt.Errorf(`Got '%s', but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
 	}
 
-	return c.JSON(http.StatusOK, FibonacciSequence(number))
+	fiboNums, err := FibonacciSequence(number)
+
+	if err != nil {
+		return logManageableError(err, http.StatusUnprocessableEntity, c)
+	}
+
+	return c.JSON(http.StatusOK, &FibonacciNumberSequence{fiboNums})
 }

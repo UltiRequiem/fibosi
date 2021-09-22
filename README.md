@@ -3,10 +3,10 @@
 [![GitMoji](https://img.shields.io/badge/Gitmoji-%F0%9F%8E%A8%20-FFDD67.svg)](https://gitmoji.dev)
 [![PkgGoDev](https://pkg.go.dev/badge/github.com/UltiRequiem/fibonacci)](https://pkg.go.dev/github.com/UltiRequiem/fibonacci)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/fibonnaci?color=blue&label=Total%20Lines)
-![CodeQL](https://github.com/UltiRequiem/fibonnaci/workflows/CodeQL/badge.svg)
-![Build](https://github.com/UltiRequiem/fibonnaci/workflows/Build/badge.svg)
-[![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/fibonnaci)](https://goreportcard.com/report/github.com/UltiRequiem/fibonnaci)
+![Lines Of Code](https://img.shields.io/tokei/lines/github.com/UltiRequiem/fibonacci?color=blue&label=Total%20Lines)
+![CodeQL](https://github.com/UltiRequiem/fibonacci/workflows/CodeQL/badge.svg)
+![Build](https://github.com/UltiRequiem/fibonacci/workflows/Build/badge.svg)
+[![Go Report Card](https://goreportcard.com/badge/github.com/UltiRequiem/fibonacci)](https://goreportcard.com/report/github.com/UltiRequiem/fibonnaci)
 
 High Performance Fibonacci Abstraction Layer and an API.
 
@@ -42,7 +42,7 @@ func main() {
 
 For more examples, see [internal](./internal/) directory.
 
-Check for more detailed info on [pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/fibonnaci/pkg).
+Check for more detailed info on [pkg.go.dev](https://pkg.go.dev/github.com/UltiRequiem/fibonacci/pkg).
 
 ## API
 

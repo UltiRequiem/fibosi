@@ -26,7 +26,7 @@ func FibonacciHandler(c echo.Context) error {
 		return logManageableError(err, http.StatusUnprocessableEntity, c)
 	}
 
-	return c.JSON(http.StatusOK, &FibonacciNumber{fiboNum})
+	return c.JSONPretty(http.StatusOK, &FibonacciNumber{fiboNum}, "  ")
 }
 
 // Sequence Path
@@ -45,5 +45,5 @@ func FibonacciSequenceHandler(c echo.Context) error {
 		return logManageableError(err, http.StatusUnprocessableEntity, c)
 	}
 
-	return c.JSON(http.StatusOK, &FibonacciNumberSequence{fiboNums})
+	return c.JSONPretty(http.StatusOK, &FibonacciNumberSequence{fiboNums},"  ")
 }

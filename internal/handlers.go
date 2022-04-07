@@ -39,11 +39,11 @@ func FibonacciSequenceHandler(c echo.Context) error {
 		return logManageableError(fmt.Errorf(`Got '%s', but a number was expected.`, numberParam), http.StatusUnprocessableEntity, c)
 	}
 
-	fiboNums, err := FibonacciSequence(number)
+	fiboNumbers, err := FibonacciSequence(number)
 
 	if err != nil {
 		return logManageableError(err, http.StatusUnprocessableEntity, c)
 	}
 
-	return c.JSONPretty(http.StatusOK, &FibonacciNumberSequence{fiboNums},"  ")
+	return c.JSONPretty(http.StatusOK, &FibonacciNumberSequence{fiboNumbers},"  ")
 }

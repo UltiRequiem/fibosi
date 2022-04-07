@@ -44,17 +44,23 @@ Check for more detailed info on
 
 ## API
 
-API Demo: https://z91bf2703-za30e6095-gtw.qovery.io
-
 ### Endpoints
 
-- Root Path
+#### `/`
 
-Try `curl http://localhost:3000/890`
+> http://localhost:3000/9
 
-- Sequence Path
+```json
+{ "number": 34 }
+```
 
-Try `curl http://localhost:3000/sequence/890`
+#### `/sequence`
+
+> http://localhost:3000/sequence/9
+
+```json
+{ "numbers": [0, 1, 1, 2, 3, 5, 8, 13, 21] }
+```
 
 ### Run The API
 
@@ -64,8 +70,7 @@ Try `curl http://localhost:3000/sequence/890`
 go install github.com/UltiRequiem/fibonacci@latest
 ```
 
-If you have correctly configured your
-[GOPATH](https://golang.org/doc/gopath_code#GOPATH), then:
+Run it 👇
 
 ```bash
 fibonacci -p 8080
@@ -78,10 +83,7 @@ You can get the build of the project in
 
 - From Source
 
-`git clone` this project or
-[download it in zip format](https://github.com/UltiRequiem/fibonacci/archive/refs/heads/main.zip).
-
-```bash
+```sh
 git clone https://github.com/UltiRequiem/fibonacci
 ```
 

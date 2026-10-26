@@ -18,7 +18,7 @@ func NewServer(port int, banner bool) error {
 	// e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-        // Favicon
+	// Favicon
 	e.File("/favicon.ico", "assets/favicon.ico")
 
 	// Paths
